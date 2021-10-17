@@ -95,6 +95,7 @@ function writePassword() {
   passwordText.value = password
 }
 
+// copy password to the clipboard
 function copyPassword() {
   passwordText.select()
   passwordText.setSelectionRange(0, 128) // for mobile devices
