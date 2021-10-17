@@ -25,7 +25,60 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <form id="criteria-form">
+            <div class="criteria-input">
+              <label for="password-length">Length (between 8-128):</label>
+              <input
+                type="number"
+                size="3"
+                id="password-length"
+                name="password-length"
+                min="8"
+                max="128"
+                value="12"
+              />
+            </div>
+            Character types to include:
+            <div class="criteria-input">
+              <label for="include-lowercase">Include lowercase: </label>
+              <input
+                type="checkbox"
+                id="include-lowercase"
+                name="include-lowercase"
+                checked
+              />
+            </div>
+            <div class="criteria-input">
+              <label for="include-uppercase">Include uppercase: </label>
+              <input
+                type="checkbox"
+                id="include-uppercase"
+                name="include-uppercase"
+                checked
+              />
+            </div>
+            <div class="criteria-input">
+              <label for="include-numeric">Include numeric: </label>
+              <input
+                type="checkbox"
+                id="include-numeric"
+                name="include-numeric"
+                checked
+              />
+            </div>
+            <div class="criteria-input">
+              <label for="include-special">Include special characters: </label>
+              <input
+                type="checkbox"
+                id="include-special"
+                name="include-special"
+                checked
+              />
+            </div>
+          </form>
+          <button type="submit" id="generate" class="btn">
+            Generate Password
+          </button>
         </div>
       </div>
     </div>
