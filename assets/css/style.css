@@ -93,13 +93,18 @@ header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
-  display: inline-block;
+  display: block;
   font-size: 22px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 20px auto;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+}
+
+.btn-sm {
+  font-size: 12px;
+  line-height: 5px;
 }
 
 button[disabled] {

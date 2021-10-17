@@ -1,5 +1,7 @@
-// get reference to the #generate button element
+// get reference to the #generate button element, the #clipboard button element, and the #password readonly input element
 var generateBtn = document.querySelector('#generate')
+var clipboardBtn = document.querySelector('#clipboard')
+var passwordText = document.querySelector('#password')
 
 // generate a password based on user inputs
 function generatePassword() {
@@ -78,16 +80,31 @@ function generatePassword() {
       chosenCharacters[Math.floor(Math.random() * chosenCharacters.length)]
   }
 
+  // enable the copy password to clipboard button due to successful generation
+  clipboardBtn.disabled = false
+
   return password
 }
 
 // write password to the #password input
 function writePassword() {
+  // disable the copy password to clipboard button until successful password generation
+  clipboardBtn.disabled = true
   var password = generatePassword()
-  var passwordText = document.querySelector('#password')
 
   passwordText.value = password
 }
 
+function copyPassword() {
+  passwordText.select()
+  passwordText.setSelectionRange(0, 128) // for mobile devices
+
+  // copy the password text to clipboard
+  navigator.clipboard.writeText(passwordText.value)
+}
+
 // add event listener to generate button
 generateBtn.addEventListener('click', writePassword)
+
+// add event listener to copy password button
+clipboardBtn.addEventListener('click', copyPassword)
