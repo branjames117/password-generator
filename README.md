@@ -4,12 +4,10 @@
 
 People with access to sensitive data require strong passwords. This application will randomly generate a password that meets the user's chosen criteria.
 
-- When the Generate Password button is clicked, a series of prompts for password criteria appears.
-- When the criteria is chosen, the length of the password must be selected, no fewer than 8 characters and no greater than 128 characters.
-- When given the choice of which types of characters to include, user can choose for their password to include or not include lowercase, uppercase, and/or special characters.
-- When each prompt is answered, the input will be validated and at least one character type selected.
-- When all the prompts are answered, the password is generated and displayed either in an alert or written onto the page.
-- The application will produce no errors in the Chrome DevTools console.
+- When the Generate Password button is clicked, user input is validated: is the length between 8 and 128 characters? is at least one of the character types (besides spaces) selected?
+- If user input is invalid, the input border becomes red and an error message is displayed, and no password is generated.
+- If user input is valid, a password matching the chosen criteria is randomly generated, and the Copy Password to Clipboard button is enabled.
+- When the Copy Password to Clipboard button is clicked, the generated password is copied to the clipboard.
 
 ## Table of Contents (Optional)
 
