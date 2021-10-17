@@ -132,6 +132,10 @@ button[disabled] {
   overflow: hidden;
 }
 
+.invalid-password {
+  border: 2px dashed red !important;
+}
+
 @media (max-width: 690px) {
   #criteria-form {
     display: flex;
