@@ -30,7 +30,6 @@
               <label for="password-length">Length (between 8-128):</label>
               <input
                 type="number"
-                size="3"
                 id="password-length"
                 name="password-length"
                 min="8"
@@ -38,9 +37,9 @@
                 value="12"
               />
             </div>
-            Character types to include:
+            <strong>Character types to include:</strong>
             <div class="criteria-input">
-              <label for="include-lowercase">Include lowercase: </label>
+              <label for="include-lowercase">Lowercase letters: </label>
               <input
                 type="checkbox"
                 id="include-lowercase"
@@ -49,7 +48,7 @@
               />
             </div>
             <div class="criteria-input">
-              <label for="include-uppercase">Include uppercase: </label>
+              <label for="include-uppercase">Uppercase letters: </label>
               <input
                 type="checkbox"
                 id="include-uppercase"
@@ -58,7 +57,7 @@
               />
             </div>
             <div class="criteria-input">
-              <label for="include-numeric">Include numeric: </label>
+              <label for="include-numeric">Numbers: </label>
               <input
                 type="checkbox"
                 id="include-numeric"
@@ -67,12 +66,20 @@
               />
             </div>
             <div class="criteria-input">
-              <label for="include-special">Include special characters: </label>
+              <label for="include-special">Special characters: </label>
               <input
                 type="checkbox"
                 id="include-special"
                 name="include-special"
                 checked
+              />
+            </div>
+            <div class="criteria-input">
+              <label for="include-spaces">Spaces: </label>
+              <input
+                type="checkbox"
+                id="include-spaces"
+                name="include-spaces"
               />
             </div>
           </form>

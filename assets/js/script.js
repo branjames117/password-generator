@@ -9,6 +9,7 @@ function generatePassword() {
   var includeUppercase = document.getElementById('include-uppercase').checked
   var includeNumeric = document.getElementById('include-numeric').checked
   var includeSpecial = document.getElementById('include-special').checked
+  var includeSpaces = document.getElementById('include-spaces').checked
 
   // begin validation, set to valid by default
   var invalidLength = false
@@ -19,7 +20,7 @@ function generatePassword() {
     invalidLength = true
   }
 
-  // check if at least one character type is selected
+  // check if at least one character type (besides spaces) is selected
   if (
     !includeLowercase &&
     !includeUppercase &&
@@ -49,9 +50,7 @@ function generatePassword() {
   var lowercaseCharacters = 'abcdefghijklmnopqrstuvwxyz'.split('')
   var uppercaseCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
   var numericCharacters = '0123456789'.split('')
-  var specialCharacters = ' !"#$%&()*+,-./:;<=>?@[]^_`{|}~'
-    .split('')
-    .concat("'")
+  var specialCharacters = '!"#$%&()*+,-./:;<=>?@[]^_`{|}~'.split('').concat("'")
 
   // add the chosen character pools to the master pool of characters to randomize
   var chosenCharacters = []
@@ -66,6 +65,9 @@ function generatePassword() {
   }
   if (includeSpecial) {
     chosenCharacters = chosenCharacters.concat(specialCharacters)
+  }
+  if (includeSpaces) {
+    chosenCharacters = chosenCharacters.concat([' '])
   }
 
   // initialize password variable

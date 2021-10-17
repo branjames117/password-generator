@@ -76,9 +76,9 @@ header {
 #criteria-form {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   margin: 0 auto;
-  width: 40%;
+  width: 50%;
 }
 
 .criteria-input {
