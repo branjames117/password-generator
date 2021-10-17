@@ -26,7 +26,7 @@ Clone the repository in a CLI using the command `git clone` to download all sour
 
 Upload HTML source code and asset files to hosting service such as GitHub Pages.
 
-The landing page is hosted [here](#).
+The password generator is hosted [here](https://branjames117.github.io/password-generator/).
 
 ![Screenshot](./assets/images/screenshot.jpg)
 
